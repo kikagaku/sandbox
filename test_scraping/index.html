@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>スクレイピングの練習</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <form name="signin" class="form-signin" action="result.html" method="GET">
+        <img class="mb-4" src="logo.png" alt="" width="150">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox mb-3">
+            <label>
+            <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button id="btn" class="btn btn-lg btn-primary btn-block" type="submit" onClick="return check()">Sign in</button>
+    </form>
+
+    <script>
+        function check() {
+            var test_email = "test@kikagaku.co.jp";
+            var test_pass = "testpass";
+            if (document.signin.email.value == test_email && document.signin.password.value == test_pass) {
+                return true;
+            } else {
+                alert("メールアドレスもしくはパスワードが間違っています。");
+                return false;
+            }
+        }
+    </script>
+
+    </body>
+</html>
